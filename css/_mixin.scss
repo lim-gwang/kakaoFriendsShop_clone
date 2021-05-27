@@ -1,0 +1,60 @@
+//========================================
+//             font color 
+//========================================
+$txt-color01 : rgb(119, 119, 119); 
+$txt-color03 : #333; 
+$txt-color04 : #333;
+$txt-color05 : #333; 
+$txt-color06 : #333;
+//========================================
+//            background color 
+//========================================
+$bg-color01 : rgb(255, 85, 117);
+$bg-color02 : rgb(252, 252, 252);
+$bg-color03 : rgb(60, 64, 75);
+$bg-color04 : rgb(255, 235, 0);
+$bg-color05 : rgba(0, 0, 0, 0.02);
+$bg-color06 : rgba(251, 46, 69, 0.95);
+$bg-color07 : rgba(239, 240, 244, .9);
+
+//========================================
+//            container layout 
+//========================================
+$container : calc(1250px + 2rem);
+
+//========================================
+//            xeicon 
+//========================================
+@mixin xeicon($content) {
+    font-family:"xeicon";
+    content: $content;
+    display:inline-block;
+}
+//========================================
+//          sub pixel rendering 
+//      position absolute center center;
+//========================================
+@mixin absoluteCenter() {
+    position:absolute;
+    left: calc(50% - 0.5px);
+    top:  calc(50% - 0.5px);
+    transform:translate(-50%,-50%) translate(.5px, .5px);
+}
+//========================================
+//              display: flex 
+//========================================
+@mixin flex($height:auto, $align:null, $justify:null) {
+    display:flex;
+    height:$height;
+    align-items: $align;
+    justify-content:$justify;
+}
+
+
+#wrap {
+    padding-top:7rem;
+}
+.container {
+    max-width: $container;
+    padding:0 1rem;
+}

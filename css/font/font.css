@@ -1,0 +1,73 @@
+/* ===========================
+            xeiocn
+================================= */
+@import url(/css/xeicon.min.css);
+
+
+/* ===========================
+            SFProText
+================================= */
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('SFProText');
+    src:url(/fonts/SFProText/SFProText-Bold.eot) format('eot'),
+        url(/fonts/SFProText/SFProText-Bold.otf) format('otf'),
+        url(/fonts/SFProText/SFProText-Bold.ttf) format('ttf'),
+        url(/fonts/SFProText/SFProText-Bold.woff) format('woff'),
+        url(/fonts/SFProText/SFProText-Bold.wof2) format('woff2')
+}
+
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('SFProText');
+    src:url(/fonts/SFProText/SFProText-Semibold.eot) format('eot'),
+        url(/fonts/SFProText/SFProText-Semibold.otf) format('otf'),
+        url(/fonts/SFProText/SFProText-Semibold.ttf) format('ttf'),
+        url(/fonts/SFProText/SFProText-Semibold.woff) format('woff'),
+        url(/fonts/SFProText/SFProText-Semibold.wof2) format('woff2')
+}
+
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('SFProText');
+    src:url(/fonts/SFProText/SFProText-Medium.eot) format('eot'),
+        url(/fonts/SFProText/SFProText-Medium.otf) format('otf'),
+        url(/fonts/SFProText/SFProText-Medium.ttf) format('ttf'),
+        url(/fonts/SFProText/SFProText-Medium.woff) format('woff'),
+        url(/fonts/SFProText/SFProText-Medium.wof2) format('woff2')
+}
+
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('SFProText');
+    src:url(/fonts/SFProText/SFProText-Regular.otf) format('eot'),
+        url(/fonts/SFProText/SFProText-Regular.otf) format('otf'),
+        url(/fonts/SFProText/SFProText-Regular.ttf) format('ttf'),
+        url(/fonts/SFProText/SFProText-Regular.woff) format('woff'),
+        url(/fonts/SFProText/SFProText-Regular.wof2) format('woff2')
+}
+
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('SFProText');
+    src:url(/fonts/SFProText/SFProText-Light.eot) format('eot'),
+        url(/fonts/SFProText/SFProText-Light.otf) format('otf'),
+        url(/fonts/SFProText/SFProText-Light.ttf) format('ttf'),
+        url(/fonts/SFProText/SFProText-Light.woff) format('woff'),
+        url(/fonts/SFProText/SFProText-Light.wof2) format('woff2')
+}
