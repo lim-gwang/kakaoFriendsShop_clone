@@ -1,0 +1,38 @@
+#nav {
+    position:fixed;
+    left:50%;
+    transform: translateX(-50%);
+    display:table;
+    width:100%;
+    table-layout:fixed;
+    max-width:500px; 
+    padding:0 1.5rem;
+    border-bottom:1px solid rgb(227, 229, 232);
+    > a {
+        display:table-cell;
+        text-align:center;
+        padding:1.5rem 1rem 1rem;
+        position:relative;
+        &.active {
+            font-weight:bold;
+            border-bottom:2px solid #000;
+            > span::after {
+                display:block;
+            }
+        }
+        > span {
+            position: relative;
+            &::after {
+                content:"";
+                display:none;
+                width:.6rem;
+                height:.6rem;
+                position:absolute;
+                right:-1rem;
+                top:0;
+                border-radius:100%;
+                background:$bg-color01;
+            }
+        }
+    }
+}
