@@ -3,10 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchCloseBtn = document.querySelector(".search-popup-close"); 
     const searchPopup = document.querySelector(".search-popup");
     
-    searchPopupBtn.addEventListener("click", 
-        () => searchPopup.style.display = "block");
+    searchPopupBtn.addEventListener("click", schPopup);
 
-    searchCloseBtn.addEventListener("click", 
-        () => searchPopup.style.display = "none");
+    searchCloseBtn.addEventListener("click", schPopup);
 
+    function schPopup() {
+        this.className === "search-popup-Btn" ?
+        searchPopup.style.display = "block" : searchPopup.style.display = "none";
+    }
 });

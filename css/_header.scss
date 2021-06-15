@@ -87,6 +87,36 @@
     }
 }
 
+.search-popup-bt {
+    .character-list {
+        @include flex();
+        flex-flow:wrap;
+        max-width:800px;
+        margin:5rem auto 2rem;
+    }
+    .character-item {
+        padding:0 1rem;
+        flex:0 0 20%;
+        &:hover .character-img {
+            transform:translateY(-2.5rem);
+        }
+        > a {
+            display:block;
+        }
+        .character-img {
+            transition:ease-out .3s;
+            display:block;
+            text-align:center;
+        }
+        .character-name {
+            margin:2rem 0;
+            display:block;
+            text-align:center;
+        }
+    }
+
+}
+
 
 
 
