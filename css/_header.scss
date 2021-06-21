@@ -15,7 +15,7 @@
     }
 }
 .flexLayout {
-    max-width:500px;
+    max-width:600px;
     margin:0 auto;
     @include flex(auto, center, space-between);
 }
@@ -48,6 +48,7 @@
     overflow-y: auto;
     z-index:100;
     background:#fff;
+    display: none;
     .search-popup-top {
         height:7rem;
         display:flex;
@@ -55,7 +56,7 @@
         padding:0 1rem;
     }
     .popup-top-wrap {
-        max-width:500px;
+        max-width:600px;
         margin:0 auto;
         padding:2rem 0;
         @include flex(7rem, center);

@@ -1,3 +1,38 @@
+@import "mixin";
 #main {
-    
+    margin-top:5rem;
+    padding-top:5rem;
+}
+.item-list {
+    @include flex(auto);
+    flex-flow:wrap;
+    > .item {
+        width:calc(25% - 2rem);
+        margin: 0 1rem;
+        > a {
+            display:block;
+        }
+        .figure {
+            display:block;
+            text-align:center;
+            background:#f8f8f8;
+        }
+        .figcaption {
+            display:block;
+            position:relative;
+        }
+    }
+}
+.cart-btn {
+    position:absolute;
+    &::before {
+        content:"\e9fc";
+        font-family:"xeicon";
+        vertical-align:middle;
+        font-size:2rem;
+        color:#000;
+    }
+    &.active::before {
+        content:"\e9fd";
+    }
 }
