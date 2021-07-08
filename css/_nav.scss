@@ -6,6 +6,8 @@
     width:100%;
     table-layout:fixed;
     max-width:500px; 
+    background:#fff;
+    z-index:50;
     > a {
         display:table-cell;
         text-align:center;

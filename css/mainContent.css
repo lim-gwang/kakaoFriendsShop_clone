@@ -6,17 +6,23 @@
 
 .item-list { display: -webkit-box; display: -ms-flexbox; display: flex; height: auto; -ms-flex-flow: wrap; flex-flow: wrap; }
 
-.item-list > .item { width: calc(25% - 2rem); margin: 0 1rem; }
+.item-list > .item { width: calc(25% - 2rem); margin: 0 1rem 2rem; }
 
 .item-list > .item > a { display: block; }
 
-.item-list > .item .figure { display: block; text-align: center; background: #f8f8f8; }
+.item-list > .item .figure { display: block; text-align: center; -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2); box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2); }
 
-.item-list > .item .figcaption { display: block; position: relative; }
+.item-list > .item .figcaption { display: block; margin-top: 2rem; position: relative; }
 
-.cart-btn { position: absolute; }
+.item-list > .item .figcaption .item-name { display: block; padding-right: 4rem; margin-bottom: .5rem; word-break: keep-all; }
+
+.item-list > .item .figcaption .item-price { display: block; font-size: 2rem; }
+
+.cart-btn { position: absolute; top: 0; right: 0; }
 
 .cart-btn::before { content: "\e9fc"; font-family: "xeicon"; vertical-align: middle; font-size: 2rem; color: #000; }
 
-.cart-btn.active::before { content: "\e9fd"; }
+.cart-btn.checked::before { content: "\e9fd"; }
+
+@media (max-width: 767px) { .item-list .item { width: calc(50% - 2rem); } }
 /*# sourceMappingURL=mainContent.css.map */
