@@ -1,4 +1,4 @@
-import getList from "./listRender";
+// import getList from "./listRender";
 
 
 const onScroll = e => {
@@ -7,7 +7,6 @@ const onScroll = e => {
         scrollTop,
         clientHeight
     } = e.target.scrollingElement;
-
 
     if (scrollTop + clientHeight === scrollHeight) {
         console.log("scroll end");
