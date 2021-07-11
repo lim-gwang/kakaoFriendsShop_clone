@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = 'http://clone1.undefcat.io/api/v1/products/new';
+        fetch(url)
+            .then(res => res.json())
+            .then(json => {
+                const test = json.data;
+
+                console.log(test)
+                
+                test.map( arg => console.log(arg.price))
+            });
+            
+
+
+        
+        
+            
+            // json() method는 promise를 return한다
+            // 그렇기 때문에 promise method인 then 이나 catch를 이어서 사용할 수있다. 
+            // 그것을 메소드 체인이라고 한다. 
+
+            // 1. 웹 환경에대해 알아보기
+            // 2. promise에 대해 알아보기. 
+            // 3. 웹 api 로컬스토리지에 대해 알아보기. 
+            // 4 .createDocumentFragment 로 한 번 감싸고 작업하는 이유는 
+            // 안에 반복문으로 돌리면 하나의 엘리멘트를 추가할 때마다 리랜더링이 되는데 그것을 어느 의미가 없는 wrapper(container)에 추가 후, 
+            // 안에 동적으로 추가 할 돔 엘리멘트를 안에 추가 후, 추가할 돔 엘리멘트를 넣은 wrapper(container)를 한 번만 랜더링이 되게끔 해주기 위함이다.  
+            // 그러면 li를 6개 넣으면 6번 랜더링이 되야하는걸 한 번만 랜더링을 해서 똑같은 결과를 얻을 수 있다.
+    </script>
+</body>
+</html>

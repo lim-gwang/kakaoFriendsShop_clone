@@ -1,22 +1,24 @@
-const listElement = document.querySelector(".item-list");
+import loadItem from "./itemRender.js";
 
-const renderItem = ({ link, name, img, price }) => {
-    const li = document.createElement("li");
 
-     li.insertAdjacentHTML(
-        "beforeend",
-        `
+function itemview(arg) {
+    const listElement = document.querySelector(".item-list");
+    listElement.innerHTML = arg.map(items => renderItem(items)).join("");
+}
+
+function renderItem(data) {
+    return `
             <li class="item">
-                <a href="${link}">
+                <a href="${data.link}">
                     <span class="figure">
-                        <img src='${img}' alt="상품이미지">
+                        <img src='${data.image.url}' alt="상품이미지">
                     </span>
                     <span class="figcaption">
                         <span class="item-name">
-                            ${name}
+                            ${data.name}
                         </span>
                         <strong class="item-price">
-                            ${price}
+                            ${data.price} ${data.currency}
                         </strong>
                         <button class="cart-btn">
                             <span class="sr-only">
@@ -26,16 +28,17 @@ const renderItem = ({ link, name, img, price }) => {
                     </span>
                 </a>
             </li>
-        `
-    )
-
+            `;
 };
 
+function itemRender() {
+    return loadItem()
+        .then(item => {
+            itemview(item)
+            console.log()
+        })
+        .catch(console.log);
+}
 
+export default itemRender;
 
-
-
-
-
-
-export default listRender;

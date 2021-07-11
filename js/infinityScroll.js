@@ -1,4 +1,5 @@
-// import getList from "./listRender";
+import itemRender from "./listRender.js";
+
 
 
 const onScroll = e => {
@@ -9,10 +10,10 @@ const onScroll = e => {
     } = e.target.scrollingElement;
 
     if (scrollTop + clientHeight === scrollHeight) {
-        console.log("scroll end");
+        itemRender();
     }
 
 }
-
+itemRender()
 
 document.addEventListener("scroll", onScroll);

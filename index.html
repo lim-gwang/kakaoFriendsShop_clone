@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/mainContent.css">
     <script src="/js/layout.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/infinityScroll.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
+    <!-- <script src="/js/listRender.js"></script> -->
+    <script type="module" src="/js/infinityScroll.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -135,21 +136,29 @@
             </div>
         </header>
         <nav id="nav">
-            <a href="#" class="active">
-                <span>신규</span>
-            </a>
-            <a href="#">
-                <span>인기</span>
-            </a>
-            <a href="#">
-                <span>마이</span>
-            </a>
+            <ul class="dis-table">
+                <li class="dis-tcell">
+                    <a href="#" class="active">
+                        <span>신규</span>
+                    </a>
+                </li>  
+                <li class="dis-tcell"> 
+                    <a href="#">
+                        <span>인기</span>
+                    </a>
+                </li>
+                <li class="dis-tcell"> 
+                    <a href="#">
+                        <span>마이</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
         <main id="main">
             <div class="item-list-wrapper">
                 <div class="container">
                     <ul class="item-list">
-                        <li class="item">
+                        <!-- <li class="item">
                             <a href="">
                                 <span class="figure">
                                     <img src="https://t1.daumcdn.net/friends/prod/product/20210601174532087_8809721509166_AW_00.jpg?type=thumb&opt=R255x255@2xa" alt="상품이미지">
@@ -248,7 +257,7 @@
                                     </button>
                                 </span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
