@@ -8,22 +8,19 @@
 </head>
 <body>
     <script>
-        const url = 'http://clone1.undefcat.io/api/v1/products/new';
-        fetch(url)
-            .then(res => res.json())
-            .then(json => {
-                const test = json.data;
+        function loadItem() {
+    
+            const url = 'http://clone1.undefcat.io/api/v1/products/new?page=';
 
-                console.log(test)
-                
-                test.map( arg => console.log(arg.price))
-            });
-            
+            return fetch(url)
+                .then(res => res.json())
+                .then(json => json);
+                    
+        }
+
+        console.log(loadItem().then(item => {console.log(item.paging)}))
 
 
-        
-        
-            
             // json() method는 promise를 return한다
             // 그렇기 때문에 promise method인 then 이나 catch를 이어서 사용할 수있다. 
             // 그것을 메소드 체인이라고 한다. 

@@ -3,7 +3,7 @@ import loadItem from "./itemRender.js";
 
 function itemview(arg) {
     const listElement = document.querySelector(".item-list");
-    listElement.innerHTML = arg.map(items => renderItem(items)).join("");
+    listElement.innerHTML += arg.map(item => renderItem(item)).join("");
 }
 
 function renderItem(data) {
@@ -11,7 +11,7 @@ function renderItem(data) {
             <li class="item">
                 <a href="${data.link}">
                     <span class="figure">
-                        <img src='${data.image.url}' alt="상품이미지">
+                        <img src='${data.image.url}' alt='${data.name},${data.price} ${data.currency}'>
                     </span>
                     <span class="figcaption">
                         <span class="item-name">
@@ -32,10 +32,10 @@ function renderItem(data) {
 };
 
 function itemRender() {
-    return loadItem()
+
+    loadItem()
         .then(item => {
-            itemview(item)
-            console.log()
+            itemview(item);
         })
         .catch(console.log);
 }
